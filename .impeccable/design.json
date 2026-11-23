@@ -1,0 +1,119 @@
+{
+  "schemaVersion": 2,
+  "generatedAt": "2026-11-09T00:00:00Z",
+  "title": "Design System: Adarsh Satpute Portfolio",
+  "extensions": {
+    "colorMeta": {
+      "ground-stone": { "role": "neutral", "displayName": "Pale Stone", "canonical": "#eceeea", "tonalRamp": ["#2b2d2a", "#4a4d48", "#6b6e69", "#8d908a", "#b0b3ad", "#cdd0ca", "#e0e3de", "#f3f5f1"] },
+      "ink-navy": { "role": "neutral", "displayName": "Ink Navy", "canonical": "#101e2b", "tonalRamp": ["#101e2b", "#223445", "#37495a", "#4f6170", "#6b7b88", "#8b99a4", "#b0bac2", "#d6dce1"] },
+      "muted-slate": { "role": "neutral", "displayName": "Muted Slate", "canonical": "#46535c", "tonalRamp": ["#1d262c", "#2c363d", "#46535c", "#5e6c76", "#788690", "#97a3ab", "#bac3c9", "#dde2e5"] },
+      "hairline": { "role": "neutral", "displayName": "Hairline", "canonical": "#c5cac4", "tonalRamp": ["#3a3e39", "#575c55", "#767b73", "#969b93", "#aeb3ac", "#c5cac4", "#dadeda", "#eceeea"] },
+      "bottle-green": { "role": "primary", "displayName": "Bottle Green", "canonical": "#17352d", "tonalRamp": ["#0a1b16", "#10271f", "#17352d", "#25503f", "#376b57", "#58896f", "#8bb09b", "#c4d8cc"] },
+      "green-ink": { "role": "neutral", "displayName": "Green Ink", "canonical": "#e8ede7", "tonalRamp": ["#5c6b60", "#76857a", "#91a095", "#aab8ae", "#c1cdc4", "#d3dcd5", "#e8ede7", "#f6f8f5"] },
+      "green-muted": { "role": "neutral", "displayName": "Green Muted", "canonical": "#a9bbb2", "tonalRamp": ["#3e5148", "#586c62", "#738880", "#8aa098", "#a9bbb2", "#bccbc3", "#d0dbd5", "#e5ece8"] },
+      "green-hairline": { "role": "neutral", "displayName": "Green Hairline", "canonical": "#35564b", "tonalRamp": ["#14241e", "#1f372f", "#2a463c", "#35564b", "#4b6e62", "#668a7d", "#8aa89c", "#b3c8bf"] },
+      "brass": { "role": "secondary", "displayName": "Brass", "canonical": "#7a5c22", "tonalRamp": ["#2e2209", "#493614", "#634a1c", "#7a5c22", "#987639", "#b5955a", "#d0b788", "#e8dabc"] },
+      "brass-light": { "role": "secondary", "displayName": "Light Brass", "canonical": "#c9a15a", "tonalRamp": ["#5a4217", "#775823", "#97732f", "#b08848", "#c9a15a", "#d8b97f", "#e6d0a6", "#f2e7ce"] }
+    },
+    "typographyMeta": {
+      "display": { "displayName": "Display", "purpose": "The name in the hero only." },
+      "headline": { "displayName": "Headline", "purpose": "Section titles and band headings." },
+      "title": { "displayName": "Title", "purpose": "Entry titles for projects and roles." },
+      "conviction": { "displayName": "Conviction", "purpose": "The two hero statements under the hairline." },
+      "body": { "displayName": "Body", "purpose": "All running text in Hanken Grotesk." },
+      "label": { "displayName": "Label", "purpose": "Nav, sub-lines, tech lists, links and dates in sentence case." }
+    },
+    "shadows": [],
+    "motion": [
+      { "name": "ease-expo-out", "value": "cubic-bezier(0.16, 1, 0.3, 1)", "purpose": "Link color transitions (0.3s) and the load rise (1.1s)." },
+      { "name": "rise", "value": "1.1s ease-expo-out both; from opacity 0, translateY(0.75rem), blur(6px); stagger 110ms per step", "purpose": "The single authored load moment, only under no-preference reduced motion." }
+    ],
+    "breakpoints": [
+      { "name": "collapse", "value": "52rem" }
+    ]
+  },
+  "components": [
+    {
+      "name": "Site Header",
+      "kind": "nav",
+      "refersTo": "site-header",
+      "description": "Sticky translucent stone header with name mark left and quiet nav right.",
+      "html": "<header class=\"ds-header\"><a class=\"ds-mark\" href=\"#\">Adarsh Satpute</a><nav class=\"ds-nav\"><a href=\"#\">Work</a><a href=\"#\">Experience</a><a href=\"#\">Skills</a><a class=\"ds-cta\" href=\"#\">Contact</a></nav></header>",
+      "css": ".ds-header { display: flex; align-items: center; justify-content: space-between; gap: 1.5rem; min-height: 4rem; padding: 0 1.5rem; background: #eceeea; border-bottom: 1px solid #c5cac4; color: #101e2b; font-family: 'Hanken Grotesk Variable', 'Helvetica Neue', Arial, sans-serif; } .ds-mark { font-family: 'Libre Caslon Display', Georgia, serif; font-size: 1.25rem; letter-spacing: 0.01em; color: inherit; text-decoration: none; } .ds-nav { display: flex; gap: 2rem; font-size: 0.9375rem; } .ds-nav a { display: inline-block; padding-block: 0.75rem; color: inherit; text-decoration: underline; text-decoration-color: transparent; text-decoration-thickness: 1px; text-underline-offset: 0.28em; transition: text-decoration-color 0.3s cubic-bezier(0.16,1,0.3,1), color 0.3s cubic-bezier(0.16,1,0.3,1); } .ds-nav a:hover { color: #7a5c22; text-decoration-color: currentColor; } .ds-nav a:focus-visible { outline: 2px solid #7a5c22; outline-offset: 4px; border-radius: 1px; } .ds-nav .ds-cta { color: #17352d; text-decoration-color: #7a5c22; }"
+    },
+    {
+      "name": "Text Link",
+      "kind": "custom",
+      "refersTo": "text-link",
+      "description": "Inline link with a hairline brass underline that turns brass on hover.",
+      "html": "<a class=\"ds-link\" href=\"#\">View the code on GitHub</a>",
+      "css": ".ds-link { color: #101e2b; font-family: 'Hanken Grotesk Variable', Arial, sans-serif; font-size: 0.9375rem; text-decoration: underline; text-decoration-color: #7a5c22; text-decoration-thickness: 1px; text-underline-offset: 0.28em; transition: text-decoration-color 0.3s cubic-bezier(0.16,1,0.3,1), color 0.3s cubic-bezier(0.16,1,0.3,1); } .ds-link:hover { color: #7a5c22; text-decoration-color: currentColor; } .ds-link:focus-visible { outline: 2px solid #7a5c22; outline-offset: 4px; border-radius: 1px; }"
+    },
+    {
+      "name": "Entry Row",
+      "kind": "card",
+      "refersTo": "text-link",
+      "description": "Ruled two-column entry (title left, content right) used for work and experience; not a card.",
+      "html": "<article class=\"ds-entry\"><div><h3>NAV.AI</h3><p class=\"ds-sub\">Accenture · 2025 to now</p></div><div><p class=\"ds-lede\">A platform for building, running and governing AI agents.</p><ul class=\"ds-points\"><li>Co-built a governance framework.</li><li>Designed the in-app AI Assistant.</li></ul><p class=\"ds-tech\">Python, FastAPI, React</p></div></article>",
+      "css": ".ds-entry { display: grid; grid-template-columns: 1fr 2fr; column-gap: 2rem; row-gap: 0.75rem; padding-block: 2.5rem; border-top: 1px solid #c5cac4; background: #eceeea; color: #101e2b; font-family: 'Hanken Grotesk Variable', Arial, sans-serif; line-height: 1.65; } .ds-entry h3 { margin: 0; font-family: 'Libre Caslon Display', Georgia, serif; font-weight: 400; font-size: 1.75rem; line-height: 1.2; } .ds-sub { margin: 0.5rem 0 0; font-size: 0.9375rem; color: #46535c; } .ds-lede { margin: 0 0 1.25rem; font-size: 1.1875rem; line-height: 1.55; } .ds-points { display: grid; gap: 0.85rem; margin: 0; padding: 0; list-style: none; max-width: 68ch; } .ds-points li { position: relative; padding-left: 1.25rem; } .ds-points li::before { content: ''; position: absolute; left: 0; top: 0.82em; width: 0.5rem; height: 1px; background: #46535c; } .ds-tech { margin: 1.25rem 0 0; font-size: 0.9375rem; color: #46535c; }"
+    },
+    {
+      "name": "Conviction Pair",
+      "kind": "custom",
+      "refersTo": "text-link",
+      "description": "Two serif statements under a hairline, the hero's signature moment.",
+      "html": "<div class=\"ds-convictions\"><p>Reliability comes from architecture, not longer prompts.</p><p>A product earns its users by doing what it promises, every time.</p></div>",
+      "css": ".ds-convictions { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); column-gap: 2rem; row-gap: 1.5rem; padding-top: 2.5rem; border-top: 1px solid #c5cac4; background: #eceeea; color: #101e2b; } .ds-convictions p { margin: 0; max-width: 24em; font-family: 'Libre Caslon Display', Georgia, serif; font-size: 1.875rem; line-height: 1.3; }"
+    },
+    {
+      "name": "Skills Row",
+      "kind": "custom",
+      "refersTo": "text-link",
+      "description": "Definition row: semibold term left, muted description right, hairline above.",
+      "html": "<dl class=\"ds-skills\"><div><dt>DevOps</dt><dd>Docker, Kubernetes, Helm, CI/CD</dd></div></dl>",
+      "css": ".ds-skills { margin: 0; background: #eceeea; font-family: 'Hanken Grotesk Variable', Arial, sans-serif; line-height: 1.65; } .ds-skills > div { display: grid; grid-template-columns: 1fr 2fr; column-gap: 2rem; padding-block: 1rem; border-top: 1px solid #c5cac4; } .ds-skills dt { font-weight: 600; color: #101e2b; } .ds-skills dd { margin: 0; color: #46535c; }"
+    },
+    {
+      "name": "Green Band Contact",
+      "kind": "custom",
+      "refersTo": "band",
+      "description": "The one filled field: green band with ruled contact list and light brass link hover.",
+      "html": "<section class=\"ds-band\"><h2>Open to conversations about building reliable AI systems.</h2><dl><div><dt>Email</dt><dd><a href=\"#\">name@example.com</a></dd></div><div><dt>Location</dt><dd>Pune, India</dd></div></dl></section>",
+      "css": ".ds-band { padding: 4rem 2rem; background: #17352d; color: #e8ede7; font-family: 'Hanken Grotesk Variable', Arial, sans-serif; line-height: 1.65; } .ds-band h2 { margin: 0 0 1.75rem; font-family: 'Libre Caslon Display', Georgia, serif; font-weight: 400; font-size: 2.25rem; line-height: 1.2; } .ds-band dl { margin: 0; display: grid; } .ds-band dl > div { display: grid; grid-template-columns: 6.5rem 1fr; padding-block: 0.8rem; border-top: 1px solid #35564b; } .ds-band dt { color: #a9bbb2; font-size: 0.9375rem; } .ds-band dd { margin: 0; } .ds-band a { color: inherit; text-decoration: underline; text-decoration-color: #c9a15a; text-decoration-thickness: 1px; text-underline-offset: 0.28em; transition: color 0.3s cubic-bezier(0.16,1,0.3,1), text-decoration-color 0.3s cubic-bezier(0.16,1,0.3,1); } .ds-band a:hover { color: #c9a15a; text-decoration-color: currentColor; } .ds-band a:focus-visible { outline: 2px solid #c9a15a; outline-offset: 4px; border-radius: 1px; }"
+    }
+  ],
+  "narrative": {
+    "northStar": "The Quiet Monograph",
+    "overview": "One calm editorial page on a 12-column grid. Richness comes from type, spacing and a single deep green band at the foot, not from paint. The mood is European, clean, minimalist, professional and high-class without being fancy. Structure is carried by hairline rules and generous whitespace; there are no cards, gradients, glows or shadows anywhere in the build.\n\nThe page reads in two tones: a cool pale-stone field with ink-navy text for the work, then one bottle-green band for credentials and contact. Brass is the only accent and it is rationed to links and focus. A high-contrast Caslon display face sets the name, headings and two pull convictions; a neutral grotesk does all reading.",
+    "keyCharacteristics": [
+      "Pale stone ground, ink-navy text, hairline rules as the only structure",
+      "One bottle-green band closes the page; nothing else is filled",
+      "Brass accent appears only on link underlines, link hover and focus rings",
+      "Serif for voice (name, headings, convictions), sans for reading",
+      "Two-column entry layout: label left, content right, on a 12-column grid",
+      "A single authored load motion; content is visible without it"
+    ],
+    "rules": [
+      { "name": "The Rationed Brass Rule", "body": "Brass marks only what can be followed or focused: links, hover, focus ring. It never fills a surface or colors headings.", "section": "colors" },
+      { "name": "The One Field Rule", "body": "Exactly one saturated field exists, the green band, and it sits at the foot. Do not add a second.", "section": "colors" },
+      { "name": "The Serif Speaks Rule", "body": "Caslon is for the name, headings and convictions only. Anything read at length is Hanken Grotesk.", "section": "typography" },
+      { "name": "The No Shouting Rule", "body": "No uppercase, no letter-spaced small labels, no bold headings. Hierarchy comes from size, face and space.", "section": "typography" },
+      { "name": "The Hairline Rule", "body": "Separation is a 1px rule in Hairline (or Green Hairline in the band). Never a shadow, card or tinted panel.", "section": "elevation" }
+    ],
+    "dos": [
+      "Do separate content with 1px hairline rules and generous padding.",
+      "Do set the name, headings and convictions in Libre Caslon Display at weight 400.",
+      "Do limit brass to link underline, link hover and focus; use Light Brass on green.",
+      "Do keep one green band at the foot and nothing else filled.",
+      "Do use the label-left, content-right split on the 12-column grid for new sections, collapsing to one column below 52rem.",
+      "Do keep motion to the single load rise and respect reduced-motion."
+    ],
+    "donts": [
+      "Don't add shadows, gradients, glows or rounded corners.",
+      "Don't introduce card grids or tinted panels; use ruled rows.",
+      "Don't add a second accent color or a second filled field.",
+      "Don't use uppercase or letter-spaced labels, bolded headings, section numbers or icons.",
+      "Don't set long reading text in the serif."
+    ]
+  }
+}

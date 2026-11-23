@@ -1,0 +1,482 @@
+---
+import '@fontsource/libre-caslon-display/400.css';
+import '@fontsource-variable/hanken-grotesk';
+import '@fontsource-variable/hanken-grotesk/wght-italic.css';
+import '../styles/global.css';
+
+const email = 'adarshask07@gmail.com';
+const phone = '+91 7385873567';
+const linkedin = 'https://www.linkedin.com/in/adarsh-satpute-0425a72a1';
+const github = 'https://github.com/adarshask07';
+
+const certs = [
+  { lines: ['Claude', 'Certified', 'Architect'], issuer: 'Anthropic', note: 'Anthropic' },
+  { lines: ['Google Cloud', 'Digital Leader'], issuer: 'Google Cloud', note: 'Google Cloud · Jan 2025' },
+  { lines: ['AB-731 Azure AI', 'Transformation', 'Leader'], issuer: 'Microsoft', note: 'Microsoft' },
+];
+const ringText = (issuer: string) =>
+  Array(Math.max(2, Math.round(48 / (issuer.length + 3)))).fill(issuer).join(' · ') + ' · ';
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="color-scheme" content="light dark" />
+    <meta name="theme-color" content="#eceeea" />
+    <title>Adarsh Satpute · Full Stack AI Engineer</title>
+    <meta
+      name="description"
+      content="Adarsh Satpute designs and builds enterprise agentic AI systems end to end. Full Stack AI Engineer and AI Solution Architect based in Pune, India."
+    />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Adarsh Satpute · Full Stack AI Engineer" />
+    <meta
+      property="og:description"
+      content="I design and build enterprise agentic AI systems end to end."
+    />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <script is:inline>
+      (function () {
+        var r = document.documentElement;
+        r.classList.add('js');
+        var t;
+        try {
+          t = localStorage.getItem('theme');
+        } catch (e) {}
+        if (t !== 'day' && t !== 'evening') {
+          t = window.matchMedia && matchMedia('(prefers-color-scheme: dark)').matches ? 'evening' : 'day';
+        }
+        r.dataset.theme = t;
+      })();
+    </script>
+  </head>
+  <body>
+    <a class="skip" href="#work">Skip to content</a>
+    <div class="progress" aria-hidden="true"><span class="fill"></span></div>
+
+    <header class="site-header">
+      <div class="wrap">
+        <div class="brand">
+          <a class="mark" href="#top" aria-label="Adarsh Satpute, back to top">Adarsh Satpute</a>
+          <span class="where" aria-hidden="true"></span>
+        </div>
+        <nav class="site-nav" aria-label="Sections">
+          <a class="opt" href="#work">Work</a>
+          <a class="opt" href="#experience">Experience</a>
+          <a class="opt" href="#skills">Skills</a>
+          <button class="theme" type="button" aria-label="Switch to evening mode">Evening</button>
+          <a class="cta" href="#contact">Contact</a>
+        </nav>
+      </div>
+    </header>
+
+    <main id="top">
+      <section class="hero">
+        <div class="wrap">
+          <div class="grid">
+            <h1 class="rise" style="--i: 0">Adarsh Satpute</h1>
+            <p class="stamp rise" style="--i: 2" aria-hidden="true">Pune · 18.52° N, 73.86° E</p>
+            <p class="role rise" style="--i: 1">
+              Full Stack AI Engineer and AI Solution Architect · Pune, India
+            </p>
+            <div class="prose rise" style="--i: 1">
+              <p>
+                I build AI systems that work as designed, <em>every time</em>, so people can put
+                their <strong>full trust</strong> in them.
+              </p>
+              <p>
+                Getting there starts with something that makes me nervous, like a concept I don’t
+                fully grasp yet. I say yes anyway and work through it in small steps, the way good
+                engineering moves, until the nervousness turns into confidence and I can judge it
+                for myself.
+              </p>
+              <p>
+                That is why I only trust what I’ve truly mastered, and why I don’t ship what I can’t
+                explain in plain words. It is also why my code and designs stay simple enough for{' '}
+                <strong>anyone, not just me</strong>, to understand and change. That is classic
+                engineering: keep it simple, and write for the next reader.
+              </p>
+            </div>
+            <div class="convictions rise" style="--i: 2">
+              <h2>Two principles I trust</h2>
+              <p>Reliability comes from <em>architecture</em>, not longer prompts.</p>
+              <p>A product earns its users by doing what it promises, <em>every time</em>.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section" id="work" aria-labelledby="work-title">
+        <div class="wrap">
+          <div class="grid">
+            <h2 class="section-title" id="work-title">Selected work</h2>
+            <div class="section-body">
+              <article class="entry">
+                <div class="entry-head">
+                  <h3>NAV.AI</h3>
+                  <p class="sub">Accenture · 2025 – present</p>
+                </div>
+                <div class="entry-body">
+                  <p class="lede">
+                    Accenture’s platform for building, running and governing AI agents. I work on
+                    the parts that make those agents <em>safe to trust</em>.
+                  </p>
+                  <ul class="points">
+                    <li>
+                      <strong>Trust checks.</strong> Co-built, with EQTY and Hedera, a framework that
+                      watches AI agents, workflows and data, tests them, and gives a verdict on
+                      whether to trust them. One of three engineers on it.
+                    </li>
+                    <li>
+                      <strong>Data lineage.</strong> Built a record of where every piece of data and
+                      every AI asset came from. It is tamper-proof on Hedera and kept separate from
+                      the core product.
+                    </li>
+                    <li>
+                      <strong>Ombudsman.</strong> Co-designed an AI agent that audits other AI
+                      systems and applies fixes only after a person approves them.
+                    </li>
+                    <li>
+                      <strong>AI Assistant.</strong> Designed it from first prototype to delivery.
+                      It guides users, takes actions for them and helps them troubleshoot.
+                    </li>
+                    <li>
+                      <strong>Structured workflows.</strong> Replaced prompt-heavy chat with
+                      UI-driven steps, which improved the AI’s task success
+                      rate by about <strong class="fig">70%</strong>.
+                    </li>
+                    <li>
+                      <strong>Safe uploads.</strong> Designed a document intake layer for AI search
+                      that can fully undo a failed upload across the vector database and file
+                      storage.
+                    </li>
+                  </ul>
+                  <p class="tech"><span class="label">Built with</span> 
+                    Python, FastAPI, SQLAlchemy, Alembic, LlamaIndex, React, TypeScript, PostgreSQL,
+                    Qdrant, Kubernetes
+                  </p>
+                </div>
+              </article>
+
+              <article class="entry">
+                <div class="entry-head">
+                  <h3>TradeMCP</h3>
+                  <p class="sub">Personal project</p>
+                </div>
+                <div class="entry-body">
+                  <p class="lede">
+                    A server that lets Claude <em>place trades</em>, manage a portfolio and fetch market
+                    data from plain-language requests.
+                  </p>
+                  <p class="tech"><span class="label">Built with</span> TypeScript, MCP, Claude, Zerodha Kite SDK</p>
+                  <p class="links">
+                    <a href="https://github.com/adarshask07/trade_mcp" rel="noopener">
+                      View the code on GitHub
+                    </a>
+                  </p>
+                </div>
+              </article>
+
+              <article class="entry">
+                <div class="entry-head">
+                  <h3>Second Brain</h3>
+                  <p class="sub">Personal project</p>
+                </div>
+                <div class="entry-body">
+                  <p class="lede">
+                    An AI knowledge store that finds your notes by <em>meaning</em>, not just by keyword.
+                    Deployed on Google Cloud Run with automated builds.
+                  </p>
+                  <p class="tech"><span class="label">Built with</span> MERN, Llama, MongoDB Atlas Vector Search, Google Cloud Run</p>
+                  <p class="links">
+                    <a href="https://secondbrain.adarshlabs.tech" rel="noopener">
+                      Open the live app
+                    </a>
+                  </p>
+                </div>
+              </article>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section" id="experience" aria-labelledby="exp-title">
+        <div class="wrap">
+          <div class="grid">
+            <h2 class="section-title" id="exp-title">Experience</h2>
+            <div class="section-body timeline">
+              <article class="entry">
+                <div class="entry-head">
+                  <h3>Full Stack LLM Developer</h3>
+                  <p class="sub">Accenture, Pune</p>
+                  <p class="sub when">May 2025 – present</p>
+                </div>
+                <div class="entry-body">
+                  <p>
+                    Building <strong>NAV.AI</strong> across backend, frontend and AI. Details are under{' '}
+                    <a href="#work">Selected work</a>.
+                  </p>
+                </div>
+              </article>
+
+              <article class="entry">
+                <div class="entry-head">
+                  <h3>AI Engineer</h3>
+                  <p class="sub">Accenture, SLB client engagement</p>
+                  <p class="sub when">Jul – Dec 2025</p>
+                </div>
+                <div class="entry-body">
+                  <ul class="points">
+                    <li>
+                      <strong>AI chat interface.</strong> Built it <em>end to end</em>. It shows answers as
+                      interactive graphs, diagrams and workflow visuals, on a reusable design system.
+                    </li>
+                    <li>
+                      <strong>Large data tables.</strong> Added in-app processing so the app can work with
+                      them directly.
+                    </li>
+                  </ul>
+                  <p class="tech"><span class="label">Built with</span> React, TypeScript, Tailwind CSS, Danfo.js, Mermaid</p>
+                </div>
+              </article>
+
+              <article class="entry">
+                <div class="entry-head">
+                  <h3>Currently</h3>
+                  <p class="sub">Self-directed</p>
+                </div>
+                <div class="entry-body">
+                  <p>
+                    Deepening the <em>mathematics and algorithms</em> behind modern large language
+                    models.
+                  </p>
+                </div>
+              </article>
+
+              <article class="entry">
+                <div class="entry-head">
+                  <h3>B.E. Information Technology</h3>
+                  <p class="sub">Pune University</p>
+                  <p class="sub when">May 2024</p>
+                </div>
+                <div class="entry-body">
+                  <p>Graduated with a CGPA of 8.84/10.</p>
+                  <p class="after">
+                    <strong>Winner</strong> of the institutional round of the Solving for India
+                    Hackathon (GeeksforGeeks, AMD and Google Cloud).
+                  </p>
+                </div>
+              </article>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section" id="skills" aria-labelledby="skills-title">
+        <div class="wrap">
+          <div class="grid">
+            <h2 class="section-title" id="skills-title">Skills</h2>
+            <div class="section-body">
+              <dl class="skills">
+                <div>
+                  <dt>AI engineering</dt>
+                  <dd>
+                    Multi-agent orchestration, RAG, MCP and MCP Apps, generative UI, responsible AI,
+                    LLM SDKs
+                  </dd>
+                </div>
+                <div>
+                  <dt>Architecture</dt>
+                  <dd>AI solutions, event-driven systems, low-level design, design patterns, REST APIs</dd>
+                </div>
+                <div>
+                  <dt>Full stack</dt>
+                  <dd>
+                    Python, FastAPI, LlamaIndex, SQLAlchemy, Alembic, TypeScript, MERN, PostgreSQL,
+                    vector databases
+                  </dd>
+                </div>
+                <div>
+                  <dt>DevOps</dt>
+                  <dd>Docker, Kubernetes, Helm, CI/CD</dd>
+                </div>
+                <div>
+                  <dt>Fundamentals</dt>
+                  <dd>
+                    Data structures, algorithms, databases, operating systems, networks, security,
+                    machine learning
+                  </dd>
+                </div>
+              </dl>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="band" id="contact">
+      <div class="wrap">
+        <div class="grid">
+          <section class="creds" aria-labelledby="creds-title">
+            <h2 id="creds-title">Certifications</h2>
+            <ul class="seals">
+              {
+                certs.map((c, i) => (
+                  <li>
+                    <svg viewBox="0 0 160 160" role="img" aria-label={`${c.lines.join(' ')}, ${c.note}`}>
+                      <circle class="outer" cx="80" cy="80" r="77" />
+                      <circle class="inner" cx="80" cy="80" r="71" />
+                      <path id={`ring-${i}`} d="M 18 80 a 62 62 0 1 1 124 0 a 62 62 0 1 1 -124 0" fill="none" />
+                      <text class="ring" aria-hidden="true">
+                        <textPath href={`#ring-${i}`} textLength="386" lengthAdjust="spacing">
+                          {ringText(c.issuer)}
+                        </textPath>
+                      </text>
+                      <text class="center" text-anchor="middle" aria-hidden="true">
+                        {c.lines.map((l, n) => (
+                          <tspan x="80" y={80 - ((c.lines.length - 1) * 16) / 2 + n * 16 + 4.5}>
+                            {l}
+                          </tspan>
+                        ))}
+                      </text>
+                    </svg>
+                    <span>{c.note}</span>
+                  </li>
+                ))
+              }
+            </ul>
+          </section>
+
+          <section class="contact" aria-labelledby="contact-title">
+            <h2 id="contact-title">Open to conversations about building reliable AI systems.</h2>
+            <dl>
+              <div>
+                <dt>Email</dt>
+                <dd>
+                  <a href={`mailto:${email}`}>{email}</a>
+                  <button class="copy" type="button" data-copy={email} aria-live="polite">Copy</button>
+                </dd>
+              </div>
+              <div>
+                <dt>Phone</dt>
+                <dd><a href={`tel:${phone.replace(/\s/g, '')}`}>{phone}</a></dd>
+              </div>
+              <div>
+                <dt>LinkedIn</dt>
+                <dd><a href={linkedin} rel="noopener">adarsh-satpute-0425a72a1</a></dd>
+              </div>
+              <div>
+                <dt>GitHub</dt>
+                <dd><a href={github} rel="noopener">adarshask07</a></dd>
+              </div>
+              <div>
+                <dt>Location</dt>
+                <dd>Pune, India</dd>
+              </div>
+            </dl>
+          </section>
+        </div>
+
+        <div class="foot">
+          <span>© 2026 Adarsh Satpute</span>
+        </div>
+      </div>
+    </footer>
+    <script is:inline>
+      (function () {
+        var root = document.documentElement;
+        var rail = document.querySelector('.progress');
+        var fill = rail.querySelector('.fill');
+        var sections = Array.prototype.slice.call(document.querySelectorAll('main > section, footer.band'));
+        var ticks = [];
+        var raf = 0;
+
+        function build() {
+          ticks.forEach(function (t) { t.el.remove(); });
+          ticks = [];
+          var max = Math.max(1, root.scrollHeight - window.innerHeight);
+          sections.forEach(function (sec) {
+            var pos = Math.min(1, Math.max(0, sec.offsetTop / max));
+            var el = document.createElement('i');
+            el.className = 'tick';
+            el.style.top = pos * 100 + '%';
+            rail.appendChild(el);
+            ticks.push({ el: el, pos: pos });
+          });
+          update();
+        }
+
+        var where = document.querySelector('.where');
+        var labels = [['work', 'Selected work'], ['experience', 'Experience'], ['skills', 'Skills'], ['contact', 'Contact']];
+
+        function currentLabel() {
+          var y = window.scrollY + window.innerHeight * 0.4;
+          var cur = '';
+          labels.forEach(function (pair) {
+            var el = document.getElementById(pair[0]);
+            if (el && el.offsetTop <= y) cur = pair[1];
+          });
+          if (where.textContent !== cur) {
+            where.textContent = cur;
+          }
+        }
+
+        function update() {
+          raf = 0;
+          currentLabel();
+          var max = Math.max(1, root.scrollHeight - window.innerHeight);
+          var p = Math.min(1, Math.max(0, window.scrollY / max));
+          fill.style.transform = 'scaleY(' + p + ')';
+          ticks.forEach(function (t) { t.el.classList.toggle('on', p >= t.pos - 0.002); });
+        }
+
+        function onScroll() { if (!raf) raf = requestAnimationFrame(update); }
+
+        window.addEventListener('scroll', onScroll, { passive: true });
+        window.addEventListener('resize', build);
+        window.addEventListener('load', build);
+        build();
+
+        var themeBtn = document.querySelector('.theme');
+        var themeMeta = document.querySelector('meta[name="theme-color"]');
+        function paintTheme() {
+          var evening = root.dataset.theme === 'evening';
+          themeBtn.textContent = evening ? 'Day' : 'Evening';
+          themeBtn.setAttribute('aria-label', evening ? 'Switch to day mode' : 'Switch to evening mode');
+          if (themeMeta) themeMeta.setAttribute('content', evening ? '#0e1814' : '#eceeea');
+        }
+        themeBtn.addEventListener('click', function () {
+          root.dataset.theme = root.dataset.theme === 'evening' ? 'day' : 'evening';
+          try { localStorage.setItem('theme', root.dataset.theme); } catch (e) {}
+          paintTheme();
+        });
+        paintTheme();
+
+        document.querySelectorAll('.copy').forEach(function (b) {
+          if (!navigator.clipboard) { b.hidden = true; return; }
+          b.addEventListener('click', function () {
+            navigator.clipboard.writeText(b.dataset.copy).then(function () {
+              var label = 'Copy';
+              b.textContent = 'Copied';
+              setTimeout(function () { b.textContent = label; }, 1600);
+            });
+          });
+        });
+
+        var marks = document.querySelectorAll('.prose em, .prose strong, .convictions em, .lede em');
+        if ('IntersectionObserver' in window) {
+          var io = new IntersectionObserver(function (entries) {
+            entries.forEach(function (e) {
+              if (e.isIntersecting) { e.target.classList.add('drawn'); io.unobserve(e.target); }
+            });
+          }, { threshold: 0.9 });
+          marks.forEach(function (m) { io.observe(m); });
+        } else {
+          marks.forEach(function (m) { m.classList.add('drawn'); });
+        }
+      })();
+    </script>
+  </body>
+</html>
